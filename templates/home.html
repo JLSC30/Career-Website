@@ -22,7 +22,11 @@
     <h2 class="text-center mt-2 mb-4">About New Moon</h2>
     <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis laudantium, quo qui voluptates ratione accusamus quisquam nihil optio, omnis inventore similique error cumque maxime rerum magnam. Quis rem fugit soluta.</p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-    <p>Todo: Show jobs here</p>
+    <p>
+      {% for job in jobs%}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </p>
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
       <p class="mt-4">Copyright 2023</p>
