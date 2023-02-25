@@ -13,18 +13,28 @@
       height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
 </head>
 
 <body>
+  {% include 'nav.html' %}
+  <img id="banner" src="/static/banner.jpg" class="img-fluid">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">New Moon Careers</h1>
-    <img id="banner" src="https://career-website.jlsc30.repl.co/static/banner.jpg" class="img-fluid">
-    <h2 class="text-center mt-2 mb-4">About New Moon</h2>
-    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis laudantium, quo qui voluptates
-      ratione accusamus quisquam nihil optio, omnis inventore similique error cumque maxime rerum magnam. Quis rem fugit
-      soluta.</p>
+    <div class="row" style="margin-bottom: 16px;">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis laudantium, quo qui
+          voluptates
+          ratione accusamus quisquam nihil optio, omnis inventore similique error cumque maxime rerum magnam. Quis rem
+          fugit
+          soluta.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpg" style="height: 320px; border-radius: 4px;">
+      </div>
+    </div>
     <h2 class="text-center mt-2 mb-4">Job Openings</h2>
     <p>
       {% for job in jobs%}
@@ -32,10 +42,11 @@
       {% endfor %}
     </p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023</p>
+      <a href=" mailto:jan.completo@gmail.com?subject=Question%20about%20job%20openings&body=My%20Name%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Question%3A%20%3CYour%20Question%3E "
+        class="btn btn-primary btn-lg">Contact Us</a>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 
 </html>
